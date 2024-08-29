@@ -3,6 +3,7 @@
 Module implements a function that implements the Pascal's Triangle
 """
 
+
 def pascal_triangle(n):
     """
     Implements pascal's triangle
@@ -23,13 +24,11 @@ def pascal_triangle(n):
     sub_triangle = pascal_triangle(n-1)
     last_row = sub_triangle[-1]
     last_row_len = len(last_row)
-    # half_len = triangle_len // 2
-    new_row = [1] + [last_row[idx] + last_row[idx-1] for idx in range(1, last_row_len)] + [1]
-    # if triangle_len % 2 == 0:
-    #     new_row = [1] + half_row[:] + [last_row[half_len] + last_row[half_len-1]] + half_row[::-1] + [1]
-    # else:
-    #     new_row = [1] + half_row[:] + half_row[::-1] + [1]
-
+    new_row = (
+        [1] +
+        [last_row[idx] + last_row[idx-1] for idx in range(1, last_row_len)] +
+        [1]
+    )
     triangle = sub_triangle[:]
     triangle.append(new_row)
 
