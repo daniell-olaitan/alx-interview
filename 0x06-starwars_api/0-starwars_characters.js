@@ -25,3 +25,4 @@ async function starwarsCharacters(filmId) {
 }
 
 starwarsCharacters(filmId);
+
