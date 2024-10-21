@@ -28,4 +28,3 @@ try:
                 print_stats()
 finally:
     print_stats()
-

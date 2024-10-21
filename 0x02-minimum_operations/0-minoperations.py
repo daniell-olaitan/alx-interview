@@ -18,4 +18,3 @@ def minOperations(n):
         else:
             i += 1
     return sumfactors + n if n > 1 else sumfactors
-
